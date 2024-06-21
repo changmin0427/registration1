@@ -46,11 +46,13 @@ function checkSession() {
         }
     }
 }
-// register.html로 리다이렉트하는 함수
+
+/// register.html로 리다이렉트하는 함수
 function redirectToRegister() {
-    window.location.href = "/register.html"; // 루트 경로에서 register.html로 이동
+    window.location.href = "/public/register.html"; // 루트 경로에서 register.html로 이동
 }
 
+// 로그인 폼 제출 이벤트 처리
 document.getElementById("loginForm").addEventListener("submit", function(e) {
     e.preventDefault();
     const username = document.getElementById("username").value;
@@ -58,4 +60,5 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
     login(username, password);
 });
 
-checkSession(); // 페이지 로드 시 세션 확인
+// 세션 확인 함수
+checkSession();

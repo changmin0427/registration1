@@ -1,26 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
-const path = require('path'); // path 모듈 추가
+const path = require('path');
 const db = require('./db');
 const app = express();
 
 app.use(bodyParser.json());
-
-// 정적 파일 제공 없이 HTML 파일 직접 제공
-app.get('/register.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'register.html'));
-});
-
-// CSS 파일 제공
-app.get('/register.css', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'register.css'));
-});
-
-// JavaScript 파일 제공
-app.get('/register.js', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'register.js'));
-});
+app.use(express.static(path.join(__dirname, 'public'))); // public 폴더를 정적 파일 제공 폴더로 설정
 
 // 직원 등록 API
 app.post('/register', (req, res) => {
