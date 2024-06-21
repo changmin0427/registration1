@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>근태관리 시스템 로그인</title>
+    <link rel="stylesheet" href="login.css"> <!-- CSS 파일 연결 -->
+    <link href="https://fonts.googleapis.com/earlyaccess/nanumpenscript.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form id="loginForm" class="login100-form">
+                <span class="login100-form-title">로그인</span>
+                <div class="input-group">
+                    <label for="username">ID</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="container-login100-form-btn">
+                    <button type="submit" class="login100-form-btn">로그인</button>
+                    <button type="button" class="register-btn" onclick="redirectToRegister()">사용자등록</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="index.js"></script> <!-- JavaScript 파일 연결 -->
+</body>
+</html>

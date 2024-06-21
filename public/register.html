@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>사용자 등록</title>
+    <link rel="stylesheet" href="register.css"> <!-- CSS 파일 연결 -->
+    <link href="https://fonts.googleapis.com/earlyaccess/nanumpenscript.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-register100">
+        <div class="wrap-register100">
+            <form id="registerForm" class="register100-form">
+                <span class="register100-form-title">사용자 등록</span>
+                <div class="input-group">
+                    <label for="id">사용자 ID:</label>
+            <input type="text" id="id" name="id" required>
+
+            <label for="password">비밀번호:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="joinDate">입사일:</label>
+            <input type="date" id="joinDate" name="joinDate" required>
+
+                <div class="container-register100-form-btn">
+
+                    <button type="submit" class="register100-form-btn">등록</button>
+                </div>
+            </form>
+        <div id="resultMessage"></div>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>
